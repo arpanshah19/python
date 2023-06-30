@@ -36,5 +36,5 @@ for source in data_lake_sources:
         print(databases, metadata)
 print("======================Final===================")
 client = boto3.client('s3')
-client.put_object(Body=json.dump(data_lake_sources), Bucket='s3-lnd', Key=f'ncbi_data_lake_lineage.json')
+client.put_object(Body=json.dump(data_lake_sources), Bucket='s3-lnd', Key=f'data_lake_lineage.json')
 print(data_lake_sources)
